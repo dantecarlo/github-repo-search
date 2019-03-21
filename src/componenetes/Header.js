@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => (
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <h1>Github Users</h1>
+    <h1 className="text-center">Github Users</h1>
     <button
       class="navbar-toggler"
       type="button"
