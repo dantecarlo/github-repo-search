@@ -22,3 +22,25 @@
 .list-group-item {
   padding: 16pt !important;
 }
+
+
+input[type=search] {
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 100%;
+    border-radius: 10em;
+   
+}
+
+.form-style {
+	padding : 0 16pt 16pt 16pt;
+}
+
+.title-style {
+	padding : 64pt 16pt 0 16pt;
+}
+
+.header {
+    background: #fcfcfc;
+}
