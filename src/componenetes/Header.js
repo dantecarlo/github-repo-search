@@ -1,26 +1,17 @@
 import React from "react";
+import "./Header.css";
 
 const Header = () => (
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <h1 className="text-center">Github Users</h1>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarColor03"
-      aria-controls="navbarColor03"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon" />
-    </button>
-    
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search"/>
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
-
-  </nav>
+  <div className="header">
+    <div>
+      <h1 className="text-Left title-style">Github Users</h1>
+    </div>
+    <div className="form-style">
+      <form>
+        <input type="search" placeholder="Search Github Users" />
+      </form>
+    </div>
+  </div>
 );
 
 export default Header;

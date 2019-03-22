@@ -1,6 +1,6 @@
 // React
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { Component, Fragment } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Apollo
 import { ApolloProvider } from "react-apollo";
@@ -10,9 +10,8 @@ import { setContext } from "apollo-link-context";
 import { InMemoryCache } from "apollo-cache-inmemory";
 
 // Componentes
-import Header from "./componenetes/Header";
 import Usuarios from "./componenetes/Usuarios";
-
+import Repositorios from "./componenetes/Repositorios";
 
 // Credenciales
 import { credenciales } from "./credenciales";
@@ -41,10 +40,16 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <Header />
-        <div className="container">
-          <Usuarios />
-        </div>
+        <Router>
+          <Fragment>
+            <div>
+              <Switch>
+                <Route exact path="/" component={Usuarios} />
+                <Route exact path="/repositorios/:id" component={Repositorios} />
+              </Switch>
+            </div>
+          </Fragment>
+        </Router>
       </ApolloProvider>
     );
   }

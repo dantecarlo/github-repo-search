@@ -1,0 +1,24 @@
+.data {
+  vertical-align: middle;
+  padding-left: 16pt;
+}
+
+.name {
+  font-size: 20pt;
+  text-align: left;
+}
+
+.login {
+  font-size: 16pt;
+}
+
+.image {
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  max-height: 60px;
+}
+
+.list-group-item {
+  padding: 16pt !important;
+}
