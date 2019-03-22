@@ -1,5 +1,6 @@
 // React
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Apollo
 import { ApolloProvider } from "react-apollo";
@@ -12,9 +13,11 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import Header from "./componenetes/Header";
 import Usuarios from "./componenetes/Usuarios";
 
+
 // Credenciales
 import { credenciales } from "./credenciales";
 
+// Conectando a Github Api
 const httpLink = createHttpLink({
   uri: "https://api.github.com/graphql"
 });

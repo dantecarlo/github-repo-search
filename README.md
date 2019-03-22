@@ -14,9 +14,9 @@ npm install
 ```
 
 ## Credenciales
-- Crear archivo `credenciales.js`.
+- Crear archivo `credenciales.js` en la carpeta src.
 - Ir a `credenciales.default.js` y copiar todo en `credenciales.js`.
-- Reemplezar `GITHUB_CLIENT_ID` y `GITHUB_CLIENT_SECRET` con tus credenciales.
+- Reemplezar 'xxx' en `GITHUB_KEY` con tu propia key de Github.
 
 ## Iniciar
 ```sh

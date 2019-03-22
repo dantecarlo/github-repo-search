@@ -1,3 +1,3 @@
 export const credenciales = {
-    GITHUB_CLIENT_SECRET: 'XXX'
+    GITHUB_KEY: 'XXX'
 }
