@@ -44,3 +44,7 @@ input[type=search] {
 .header {
     background: #fcfcfc;
 }
+
+a{
+  color: black !important;
+}

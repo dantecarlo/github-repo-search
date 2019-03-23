@@ -1,0 +1,40 @@
+.Repositorio {
+    margin: 16pt 16pt 0 16pt;
+    position: relative;
+}
+
+.name {
+    font-size: 20pt;
+    text-align: left;
+}
+
+.description {
+    font-size: 12pt;
+    text-align: left;
+}
+
+.pr {
+    font-size: 12pt;
+    text-align: right;
+}
+
+.headerRepository {
+    background: #fcfcfc;
+    padding: 16pt 0 16pt 8pt;
+}
+
+.headerName {
+  text-align: center;
+  font-size: 20pt;
+  vertical-align: middle; 
+}
+
+.backArrow {
+    margin-top: 3pt; 
+    width: 70px;
+    vertical-align: middle;    
+}
+
+.users {
+    vertical-align: middle;
+}

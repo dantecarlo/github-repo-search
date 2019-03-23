@@ -28,10 +28,15 @@ export const REPOSITORIO_USUARIO = gql`
         node {
           ... on User {
             login
-            repositories(first: 10) {
-              nodes {
-                name
-                description
+            repositories(
+              last: 5
+              orderBy: { direction: ASC, field: PUSHED_AT }
+            ) {
+              edges {
+                node {
+                  name
+                  description
+                }
               }
             }
           }
