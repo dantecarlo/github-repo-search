@@ -38,7 +38,7 @@ export default class Usuarios extends Component {
         </div>
 
         <div>
-          <Query query={BUSCAR_USUARIOS_QUERY} variables={"john"}>
+          <Query query={BUSCAR_USUARIOS_QUERY} variables={{nombre: this.state.nombre}}>
             {({ loading, error, data }) => {
               if (loading) return "Cargando...";
               if (error) return `Error: ${error.message}`;
