@@ -10,13 +10,13 @@ Esta web-app fue creada usando: [create-react-app]
 ```sh
 git clone https://github.com/dantecarlo/github-repo-search.git
 cd github-repo-search
-npm install
+npm i
 ```
 
 ## Credenciales
 - Crear archivo `credenciales.js` en la carpeta src.
 - Ir a `credenciales.default.js` y copiar todo en `credenciales.js`.
-- Reemplezar 'xxx' en `GITHUB_KEY` con tu propia key de Github.
+- Reemplezar 'xxx' en `GITHUB_KEY` con tu propia llave de Github.
 
 ## Iniciar
 ```sh

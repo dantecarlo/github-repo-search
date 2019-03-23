@@ -16,7 +16,7 @@ export default class Usuarios extends Component {
       <Fragment>
         <div className="header">
           <div>
-            <h1 className="text-Left title-style">Github Users</h1>
+            <h1 className="text-Left title-style"><strong>Github Users</strong></h1>
           </div>
           <div className="form-style">
             <form onSubmit={e => {
@@ -45,10 +45,9 @@ export default class Usuarios extends Component {
               return (
                 <ul className="list-group list-group-flush">
                   {data.search.edges.map(item => (
-                    <li key={item.id} className="list-group-item">
+                    <li key={item.node.id} className="list-group-item">
                       <div className="d-inline-block text-center">
                         <img
-                          key={item.id}
                           src={item.node.avatarUrl}
                           className="image rounded-circle"
                           alt="avatar"

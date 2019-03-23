@@ -45,7 +45,7 @@ class App extends Component {
             <div>
               <Switch>
                 <Route exact path="/" component={Usuarios} />
-                <Route exact path="/repositorios/:id" component={Repositorios} />
+                <Route exact path="/repositorios/:nombre" component={Repositorios} />
               </Switch>
             </div>
           </Fragment>

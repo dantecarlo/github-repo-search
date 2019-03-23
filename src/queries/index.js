@@ -9,6 +9,7 @@ export const BUSCAR_USUARIOS_QUERY = gql`
             edges {
                 node {
                     ... on User {
+                        id
                         name
                         login
                         location
