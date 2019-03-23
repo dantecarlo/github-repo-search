@@ -36,6 +36,13 @@ export const REPOSITORIO_USUARIO = gql`
                 node {
                   name
                   description
+                  pullRequests(last: 100) {
+                    edges {
+                      node {
+                        id
+                      }
+                    }
+                  }
                 }
               }
             }

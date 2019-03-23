@@ -46,31 +46,46 @@ export default class Usuarios extends Component {
           >
             {({ loading, error, data }) => {
               if (loading) return "Cargando...";
-              if (error) return `Error: ${error.message}`;
-              return (
-                <ul className="list-group list-group-flush">
-                  {data.search.edges.map(item => (
+              if (error)
+                return (
+                  <p className="alert alert-danger p-3 text-center">
+                    {" "}
+                    {`Error: ${error.message}`} Press shift + F5 ;){" "}
+                  </p>
+                );
+              if (data.search.edges.length !== 0 || this.state.nombre === " ")
+                return (
+                  <ul className="list-group list-group-flush">
+                    {data.search.edges.map(item => (
+                      <li className="list-group-item">
+                        <Link to={`/repositorios/${item.node.login}`}>
+                          <div className="d-inline-block text-center text-link">
+                            <img
+                              src={item.node.avatarUrl}
+                              className="backArrow rounded-circle"
+                              alt="avatar"
+                            />
+                          </div>
+                          <div className="d-inline-block data">
+                            <span className="name">
+                              {item.node.name}, {item.node.location}
+                            </span>
+                            <br />
+                            <span className="login">{item.node.login}</span>
+                          </div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              else
+                return (
+                  <ul className="list-group list-group-flush">
                     <li className="list-group-item">
-                      <Link to={`/repositorios/${item.node.login}`}>
-                        <div className="d-inline-block text-center text-link">
-                          <img
-                            src={item.node.avatarUrl}
-                            className="backArrow rounded-circle"
-                            alt="avatar"
-                          />
-                        </div>
-                        <div className="d-inline-block data">
-                          <span className="name">
-                            {item.node.name}, {item.node.location}
-                          </span>
-                          <br />
-                          <span className="login">{item.node.login}</span>
-                        </div>
-                      </Link>
+                      <span className="name">No Results</span>
                     </li>
-                  ))}
-                </ul>
-              );
+                  </ul>
+                );
             }}
           </Query>
         </div>
