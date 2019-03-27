@@ -1,7 +1,7 @@
 # Esta es una app para poder ver usuarios y sus respectivos repositorios
 Esta web-app fue creada usando: [create-react-app]
 
-## Prerequisitos
+## Prerrequisitos
 - Git
 - Nodejs
 - Github Credentials
@@ -23,7 +23,7 @@ npm i
 npm start
 ```
 
-##Arquitectura
+## Arquitectura
 - Se separo esta web-app por componente la cual se encuentran en la carperta src/componentes.
 - Se separo los Querys en su propio archivo la cual se encuentran en la carperta src/queries.
 - Se tiene un archivo central donde se arma los componentes y el resto de la web-app llamado App.js
