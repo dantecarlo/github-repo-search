@@ -24,6 +24,11 @@ npm start
 ```
 
 ## Arquitectura
+<<<<<<< HEAD
 - Se separo esta web-app por componente la cual se encuentran en la carpeta src/componentes.
 - Se separó los Querys en su propio archivo la cual se encuentran en la carpeta src/queries.
+=======
+- Se separo esta web-app por componente la cual se encuentran en la carperta src/componentes.
+- Se separo los Querys en su propio archivo la cual se encuentran en la carperta src/queries.
+>>>>>>> 8f25537670590d42e289204a6ee1de66ce5bfae9
 - Se tiene un archivo central donde se arma los componentes y el resto de la web-app llamado App.js
