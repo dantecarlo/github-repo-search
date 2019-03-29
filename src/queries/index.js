@@ -1,9 +1,15 @@
 import gql from "graphql-tag";
 
 export const BUSCAR_USUARIOS_QUERY = gql`
-  query buscar_usuario($nombre: String!) {
-    search(query: $nombre, type: USER, first: 10) {
+  query buscar_usuario($nombre: String!, $pagina: String) {
+    search(query: $nombre, type: USER, first: 10, after: $pagina) {
       userCount
+      pageInfo {
+        startCursor
+        hasPreviousPage
+        hasNextPage
+        endCursor
+      }
       edges {
         node {
           ... on User {
@@ -20,8 +26,8 @@ export const BUSCAR_USUARIOS_QUERY = gql`
 `;
 
 export const REPOSITORIO_USUARIO = gql`
-  query buscar_usuario($nombre: String!) {
-    search(query: $nombre, type: USER, first: 10) {
+  query buscar_usuario($nombre: String!, $pagina: String) {
+    search(query: $nombre, type: USER, first: 10, after: $pagina) {
       edges {
         node {
           ... on User {
